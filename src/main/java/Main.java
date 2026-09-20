@@ -1,9 +1,12 @@
-import aprovacao.Aluno;
+import grid.FabricaGoodwe;
+import grid.Grid;
 
 public class Main {
     public static void main(String[] args) {
-        Aluno aluno = new Aluno();
-        aluno.setFrequencia(10);
-        System.out.println("Frequência: " + aluno.getFrequencia());
+        Grid grid = new Grid(
+                new FabricaGoodwe());
+        System.out.println("Grid initialized with FabricaGoodwe.");
+        System.out.println("Start charging: " + grid.startCharging());
+        System.out.println("Meter reading: " + grid.getMeterReading());
     }
 }
